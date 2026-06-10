@@ -18,7 +18,7 @@ a, button {
 
 .container {
     max-width: 850px;
-    margin: 40px auto;
+    margin: 0 auto 40px auto; /* Changed top margin to 0 to prevent pushing elements down */
     padding: 0 24px;
 }
 
@@ -144,6 +144,7 @@ a, button {
     padding: 80px 24px;
     background: linear-gradient(135deg, #1e3a27, #2d5a3b); 
     color: white;
+    margin-top: -10px; /* Pulls the header up slightly to snap perfectly to the navbar */
 }
 
 .hero h1 {
