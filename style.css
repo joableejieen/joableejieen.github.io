@@ -135,7 +135,6 @@ a, button {
     justify-content: center;
 }
 
-/* Elegant Placeholder Box/Image for your photo */
 .home-image {
     max-width: 400px;
     width: 100%;
@@ -143,7 +142,7 @@ a, button {
     object-fit: cover;
     border-radius: 16px;
     background-color: #e1ebe4; /* Light green box placeholder before image is uploaded */
-    border: 2px dashed #3b8256; /* Subtle border indicating an upload space */
+    border: 1px solid #c3d6c9; /* Clean, subtle solid border instead of dotted */
 }
 
 /* Sub-page Headers */
