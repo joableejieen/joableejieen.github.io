@@ -25,16 +25,24 @@ a, button {
 /* New Navbar Layout */
 .navbar {
     background-color: #1e3a27; 
-    display: flex;
-    justify-content: space-between; /* Pushes brand to left, links to right */
-    align-items: center;
-    padding: 12px 40px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     position: fixed;
     top: 0;
     width: 100%;
     box-sizing: border-box;
     z-index: 1000; 
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+/* This restricts the width and centers the content with equal side walls */
+.navbar-container {
+    max-width: 1200px; /* Matches the maximum width of your homepage split layout */
+    margin: 0 auto; /* Centers the container perfectly */
+    display: flex;
+    justify-content: space-between; /* Keeps brand on left, links on right *within* the centered area */
+    align-items: center;
+    padding: 12px 40px; /* Controls the padding inside the container */
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* Left Brand styling */
@@ -45,7 +53,7 @@ a, button {
     text-decoration: none;
     font-weight: 700;
     font-size: 1.1rem;
-    background: none !important; /* Removes hover box background */
+    background: none !important; 
 }
 
 .nav-logo {
