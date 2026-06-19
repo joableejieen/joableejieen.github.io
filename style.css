@@ -141,7 +141,7 @@ a, button {
     object-fit: cover;
     border-radius: 16px;
     background-color: #e1ebe4; /* Light green box placeholder before image is uploaded */
-    border: none #c3d6c9; /* Clean, subtle solid border instead of dotted */
+    border: none; 
 }
 
 /* Sub-page Headers */
@@ -206,9 +206,10 @@ h2 {
 .about-intro {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 20px;
     margin-top: 40px;
     margin-bottom: 25px;
+    width: 100%;
 }
 
 .iam-text {
@@ -218,103 +219,25 @@ h2 {
     white-space: nowrap;
 }
 
-/* Horizontal Swiping Track */
+/* Updated Horizontal Centered Swiping Track */
 .carousel-track {
     display: flex;
     gap: 12px;
-    overflow-x: auto; /* Enables horizontal scroll/swipe on smaller screens */
-    scrollbar-width: none; /* Hides default scrollbar for Firefox */
-    padding: 5px 0;
-    width: 100%;
+    overflow-x: auto; /* Keeps horizontal scroll active */
+    scroll-behavior: smooth;
+    padding: 10px 150px; /* Added padding on sides so items can land dead center */
+    max-width: 500px; /* Restricts width so items overflow and trigger the slide action */
+    scrollbar-width: none; /* Hides scrollbar on Firefox */
 }
 
 .carousel-track::-webkit-scrollbar {
-    display: none; /* Hides default scrollbar for Chrome/Safari */
+    display: none; /* Hides scrollbar on Chrome/Safari */
 }
 
 /* Carousel Tab Buttons */
 .carousel-tab {
     font-family: 'JetBrains Mono', monospace;
     background-color: #ffffff;
-    border: 1px solid #c3d6c9;
+    border: 1px solid #d0ded5;
     padding: 10px 24px;
-    border-radius: 30px;
-    color: #2d5a3b;
-    font-weight: 500;
-    font-size: 1rem;
-    white-space: nowrap;
-    transition: all 0.3s ease;
-}
-
-.carousel-tab:hover, .carousel-tab.active {
-    background-color: #3b8256;
-    color: #ffffff;
-    border-color: #3b8256;
-    transform: translateY(-1px);
-}
-
-/* Dynamic Content Display Area */
-.dynamic-content-box {
-    background: white;
-    border-radius: 16px;
-    padding: 40px;
-    box-shadow: 0 4px 12px rgba(30, 58, 39, 0.03); 
-    border: 1px solid #e1ebe4;
-    min-height: 350px;
-}
-
-/* Hide all contents by default */
-.tab-content {
-    display: none;
-}
-
-/* Show active content block */
-.tab-content.active {
-    display: block;
-    animation: fadeIn 0.4s ease;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(5px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* Content Layout Grid */
-.tab-split {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 40px;
-}
-
-.tab-text {
-    flex: 1.3;
-}
-
-.tab-text h2 {
-    margin-top: 0;
-    font-size: 1.8rem;
-    border-bottom: none;
-    padding-bottom: 0;
-}
-
-.tab-media {
-    flex: 0.9;
-    display: flex;
-    justify-content: center;
-}
-
-/* Photo Frames inside Tabs */
-.media-placeholder {
-    width: 100%;
-    height: 280px;
-    background-color: #e1ebe4;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #5c7a65;
-    font-size: 0.9rem;
-    font-weight: 500;
-    border: 1px solid #c3d6c9;
-}
+    border
