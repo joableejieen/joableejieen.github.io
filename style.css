@@ -109,11 +109,11 @@ a, button {
 
 .home-left {
     flex: 1;
-    text-align: left; /* Shifted name text to the left */
+    text-align: left;
 }
 
 .giant-name {
-    font-size: 6.5rem; /* Made even larger! */
+    font-size: 6.5rem;
     font-weight: 700;
     color: #1e3a27;
     margin: 0;
@@ -141,7 +141,7 @@ a, button {
     object-fit: cover;
     border-radius: 16px;
     background-color: #e1ebe4; /* Light green box placeholder before image is uploaded */
-    border: 1px solid #c3d6c9; /* Clean, subtle solid border instead of dotted */
+    border: none #c3d6c9; /* Clean, subtle solid border instead of dotted */
 }
 
 /* Sub-page Headers */
