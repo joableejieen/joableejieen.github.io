@@ -101,9 +101,18 @@
             });
             
             // Add active status to clicked tab
-            event.currentTarget.classList.add('active');
+            const clickedTab = event.currentTarget;
+            clickedTab.classList.add('active');
+            
             // Show corresponding content block
             document.getElementById(tabId).classList.add('active');
+        
+            // Smoothly scroll the clicked tab directly into the center of the carousel track
+            clickedTab.scrollIntoView({
+                behavior: 'smooth',
+                block: 'nearest',
+                inline: 'center'
+            });
         }
     </script>
 
