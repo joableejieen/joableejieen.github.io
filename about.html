@@ -116,31 +116,36 @@
     </main>
 
     <script>
-        function switchTab(tabId) {
-            // Remove active status from all tabs
-            document.querySelectorAll('.carousel-tab').forEach(tab => {
-                tab.classList.remove('active');
+            function switchTab(tabId) {
+                // Remove active status from all tabs
+                document.querySelectorAll('.carousel-tab').forEach(tab => {
+                    tab.classList.remove('active');
+                });
+                // Hide all tab contents
+                document.querySelectorAll('.tab-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+                
+                // Add active status to clicked tab
+                const clickedTab = event ? event.currentTarget : document.querySelector(`[onclick="switchTab('${tabId}')"]`);
+                clickedTab.classList.add('active');
+                
+                // Show corresponding content block
+                document.getElementById(tabId).classList.add('active');
+    
+                // Smoothly scroll the clicked tab directly into the center of the carousel track
+                clickedTab.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            }
+    
+            // NEW: This forces the Engineer tab to center itself automatically on page load
+            window.addEventListener('DOMContentLoaded', () => {
+                switchTab('engineer');
             });
-            // Hide all tab contents
-            document.querySelectorAll('.tab-content').forEach(content => {
-                content.classList.remove('active');
-            });
-            
-            // Add active status to clicked tab
-            const clickedTab = event.currentTarget;
-            clickedTab.classList.add('active');
-            
-            // Show corresponding content block
-            document.getElementById(tabId).classList.add('active');
-        
-            // Smoothly scroll the clicked tab directly into the center of the carousel track
-            clickedTab.scrollIntoView({
-                behavior: 'smooth',
-                block: 'nearest',
-                inline: 'center'
-            });
-        }
-    </script>
+        </script>
 
 </body>
 </html>
