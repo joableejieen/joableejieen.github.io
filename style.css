@@ -225,7 +225,7 @@ h2 {
     gap: 12px;
     overflow-x: auto; /* Keeps horizontal scroll active */
     scroll-behavior: smooth;
-    padding: 10px 400px; /* Added padding on sides so items can land dead center */
+    padding: 10px 500px; /* Added padding on sides so items can land dead center */
     max-width: 500px; /* Restricts width so items overflow and trigger the slide action */
     scrollbar-width: none; /* Hides scrollbar on Firefox */
 }
