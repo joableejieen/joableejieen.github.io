@@ -240,4 +240,95 @@ h2 {
     background-color: #ffffff;
     border: 1px solid #d0ded5;
     padding: 10px 24px;
-    border
+    border-radius: 30px;
+    
+    /* Faded style for unselected items */
+    color: #8da394; 
+    opacity: 0.65;
+    
+    white-space: nowrap;
+    transition: all 0.4s ease;
+}
+
+/* When hovering over unselected tabs */
+.carousel-tab:hover {
+    opacity: 0.9;
+    color: #2d5a3b;
+    border-color: #3b8256;
+}
+
+/* Highlighted, focused center selection */
+.carousel-tab.active {
+    background-color: #3b8256;
+    color: #ffffff;
+    border-color: #3b8256;
+    opacity: 1;
+    transform: scale(1.05); /* Slightly larger */
+    box-shadow: 0 4px 10px rgba(59, 130, 86, 0.2);
+}
+
+/* Dynamic Content Display Area */
+.dynamic-content-box {
+    background: white;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 4px 12px rgba(30, 58, 39, 0.03); 
+    border: 1px solid #e1ebe4;
+    min-height: 350px;
+}
+
+/* Hide all contents by default */
+.tab-content {
+    display: none;
+}
+
+/* Show active content block */
+.tab-content.active {
+    display: block;
+    animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Content Layout Grid */
+.tab-split {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.tab-text {
+    flex: 1.3;
+}
+
+.tab-text h2 {
+    margin-top: 0;
+    font-size: 1.8rem;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.tab-media {
+    flex: 0.9;
+    display: flex;
+    justify-content: center;
+}
+
+/* Photo Frames inside Tabs */
+.media-placeholder {
+    width: 100%;
+    height: 280px;
+    background-color: #e1ebe4;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #5c7a65;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 1px solid #c3d6c9;
+}
