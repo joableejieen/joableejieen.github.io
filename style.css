@@ -206,10 +206,13 @@ h2 {
 .about-intro {
     display: flex;
     align-items: center;
-    gap: 20px;
+    justify-content: flex-start;
+    gap: 10px; /* Brings the carousel track tighter to the text */
     margin-top: 40px;
     margin-bottom: 25px;
     width: 100%;
+    padding-left: 60px; /* Shims the "I am a:" text further inward to the right */
+    box-sizing: border-box;
 }
 
 .iam-text {
@@ -223,15 +226,15 @@ h2 {
 .carousel-track {
     display: flex;
     gap: 12px;
-    overflow-x: auto; /* Keeps horizontal scroll active */
+    overflow-x: auto; 
     scroll-behavior: smooth;
-    padding: 10px 300px; /* Added padding on sides so items can land dead center */
-    max-width: 500px; /* Restricts width so items overflow and trigger the slide action */
-    scrollbar-width: none; /* Hides scrollbar on Firefox */
+    padding: 10px 110px; /* Adjusted padding to match the shorter layout */
+    max-width: 380px; /* Shortened the track width so it looks compact next to the text */
+    scrollbar-width: none; 
 }
 
 .carousel-track::-webkit-scrollbar {
-    display: none; /* Hides scrollbar on Chrome/Safari */
+    display: none; 
 }
 
 /* Carousel Tab Buttons */
