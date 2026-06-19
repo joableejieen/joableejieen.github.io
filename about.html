@@ -4,47 +4,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me | Joab Lee</title>
-    <link rel="icon" type="image/png" href="favicon.png"> <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav class="navbar">
-        <div class="navbar-container"> <a href="index.html" class="nav-brand">
+        <div class="navbar-container">
+            <a href="index.html" class="nav-brand">
                 <img src="favicon.png" alt="Logo" class="nav-logo">
                 <span>Joab Lee</span>
             </a>
-            
             <div class="nav-links">
                 <a href="index.html">Home</a>
-                <a href="about.html"class="active" >About Me</a>
+                <a href="about.html" class="active">About Me</a>
                 <a href="projects.html">My Projects</a>
                 <a href="achievements.html">Achievements</a>
             </div>
         </div>
     </nav>
 
-    <header class="hero">
-        <h1>About Me</h1>
-        <p class="subtitle">Who I am and what drives my passion</p>
-    </header>
-
     <main class="container">
-        <section>
-            <h2>My Story</h2>
-            <p>
-                Write a brief introduction about yourself here. Talk about what sparked your interest in this field, how long you've been practicing or learning about it, and why you are excited to pursue this diploma in polytechnic.
-            </p>
-        </section>
+        <div class="about-intro">
+            <span class="iam-text">I am a:</span>
+            
+            <div class="carousel-track">
+                <button class="carousel-tab active" onclick="switchTab('engineer')">Engineer</button>
+                <button class="carousel-tab" onclick="switchTab('musician')">Musician</button>
+                <button class="carousel-tab" onclick="switchTab('innovator')">Innovator</button>
+                <button class="carousel-tab" onclick="switchTab('leader')">Team Leader</button>
+            </div>
+        </div>
 
-        <section>
-            <h2>My Skills & Strengths</h2>
-            <ul class="skills-list">
-                <li><strong>Technical Skill 1:</strong> (e.g., Python, Photoshop, Public Speaking)</li>
-                <li><strong>Technical Skill 2:</strong> (e.g., Video Editing, Excel, Project Management)</li>
-                <li><strong>Soft Skill:</strong> (e.g., Teamwork, Problem Solving, Adaptability)</li>
-            </ul>
-        </section>
+        <div class="dynamic-content-box">
+            
+            <div id="engineer" class="tab-content active">
+                <div class="tab-split">
+                    <div class="tab-text">
+                        <h2>The Engineer</h2>
+                        <p>This is where you will talk about your technical mindset. Mention your engineering interests, hands-on tinkering, coding projects, or physics/math concepts you love applying to solve problems.</p>
+                    </div>
+                    <div class="tab-media">
+                        <div class="media-placeholder">Engineering Photo</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="musician" class="tab-content">
+                <div class="tab-split">
+                    <div class="tab-text">
+                        <h2>The Musician</h2>
+                        <p>Share your musical side here! Talk about the instruments you play, your creative process, or how music trains your discipline, focus, and dedication—skills that carry over directly into engineering.</p>
+                    </div>
+                    <div class="tab-media">
+                        <div class="media-placeholder">Music Photo</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="innovator" class="tab-content">
+                <div class="tab-split">
+                    <div class="tab-text">
+                        <h2>The Innovator</h2>
+                        <p>Detail how you think outside the box. Talk about hackathons, idea generation, or instances where you looked at a daily problem and tried to design a creative alternative or prototype for it.</p>
+                    </div>
+                    <div class="tab-media">
+                        <div class="media-placeholder">Innovation Photo</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="leader" class="tab-content">
+                <div class="tab-split">
+                    <div class="tab-text">
+                        <h2>The Team Leader</h2>
+                        <p>Highlight your interpersonal strengths. Discuss your CCA positions, group project experiences, or peer support roles where you successfully managed communication, alignment, and execution.</p>
+                    </div>
+                    <div class="tab-media">
+                        <div class="media-placeholder">Leadership Photo</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </main>
+
+    <script>
+        function switchTab(tabId) {
+            // Remove active status from all tabs
+            document.querySelectorAll('.carousel-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            // Hide all tab contents
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // Add active status to clicked tab
+            event.currentTarget.classList.add('active');
+            // Show corresponding content block
+            document.getElementById(tabId).classList.add('active');
+        }
+    </script>
 
 </body>
 </html>
