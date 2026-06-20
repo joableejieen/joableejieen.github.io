@@ -340,18 +340,27 @@ h2 {
 .tab-image {
     width: 100%;
     height: 280px;
-    object-fit: cover; /* Crops the photo cleanly so it fills the rectangle perfectly without warping */
+    object-fit: cover; 
     border-radius: 12px;
     border: 1px solid #c3d6c9;
-    background-color: #e1ebe4; /* Acts as a smooth background while image loads */
+    background-color: #e1ebe4; 
 }
 
 /* Caption Below Photos */
 .image-caption {
     font-size: 0.8rem;
     color: #5c7a65;
-    margin-top: 10px;
+    margin-top: 12px; /* Gives it a bit of breathing room below the image */
     text-align: center;
     line-height: 1.4;
     font-style: italic;
+    width: 100%; /* Ensures text centers relative to the photo width */
+}
+
+.tab-media {
+    flex: 0.9;
+    display: flex;
+    flex-direction: column; /* Forces the caption to sit directly underneath the image */
+    justify-content: flex-start;
+    align-items: center;
 }
