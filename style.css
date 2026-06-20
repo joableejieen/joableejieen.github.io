@@ -364,3 +364,26 @@ h2 {
     justify-content: flex-start;
     align-items: center;
 }
+
+/* Ebook Link Button styling */
+.ebook-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #1e3a27; /* Dark Forest Green */
+    color: #ffffff !important;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    border: 1px solid #1e3a27;
+    transition: all 0.3s ease;
+}
+
+/* Hover effects for the button */
+.ebook-btn:hover {
+    background-color: #3b8256; /* Turns vibrant emerald green on hover */
+    border-color: #3b8256;
+    transform: translateY(-2px); /* Subtle upward floating effect */
+    box-shadow: 0 4px 12px rgba(59, 130, 86, 0.15);
+}
