@@ -387,3 +387,77 @@ h2 {
     transform: translateY(-2px); /* Subtle upward floating effect */
     box-shadow: 0 4px 12px rgba(59, 130, 86, 0.15);
 }
+
+/* Gallup CliftonStrengths Section Layout */
+.strengths-section {
+    margin-top: 60px;
+    padding: 20px 0;
+}
+
+.strengths-title {
+    font-size: 1.8rem;
+    color: #1e3a27;
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 5px;
+}
+
+.strengths-subtitle {
+    font-size: 0.9rem;
+    color: #5c7a65;
+    margin-bottom: 30px;
+}
+
+/* Modern Layout Grid for the Top 5 Cards */
+.strengths-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+/* Base Card Design */
+.strength-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    border-top: 5px solid #c3d6c9; /* Subtle fallback top border */
+    box-shadow: 0 4px 12px rgba(30, 58, 39, 0.02);
+    border-left: 1px solid #e1ebe4;
+    border-right: 1px solid #e1ebe4;
+    border-bottom: 1px solid #e1ebe4;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.strength-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(30, 58, 39, 0.06);
+}
+
+.strength-number {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #8da394;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.strength-card h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.1rem;
+    color: #1e3a27;
+    font-weight: 700;
+}
+
+.strength-card p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #5c7a65;
+    line-height: 1.5;
+}
+
+/* Gallup Domain Authentic Color-coding Accents */
+.strength-card.execution { border-top: 5px solid #ae2a2a; } /* Burgundy/Executing */
+.strength-card.influencing { border-top: 5px solid #d4a017; } /* Yellow-Gold/Influencing */
+.strength-card.relationship { border-top: 5px solid #2b6cb0; } /* Blue/Relationship Building */
+.strength-card.strategic { border-top: 5px solid #2f855a; } /* Green/Strategic Thinking */
