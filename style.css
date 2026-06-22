@@ -457,7 +457,7 @@ h2 {
 }
 
 /* Gallup Domain Authentic Color-coding Accents */
-.strength-card.execution { border-top: 5px solid #ae2a2a; } /* Burgundy/Executing */
-.strength-card.influencing { border-top: 5px solid #d4a017; } /* Yellow-Gold/Influencing */
-.strength-card.relationship { border-top: 5px solid #2b6cb0; } /* Blue/Relationship Building */
-.strength-card.strategic { border-top: 5px solid #2f855a; } /* Green/Strategic Thinking */
+.strength-card.execution { border-top: 5px solid #7b2481; }
+.strength-card.influencing { border-top: 5px solid #d4a017; } 
+.strength-card.relationship { border-top: 5px solid #2b6cb0; } 
+.strength-card.strategic { border-top: 5px solid #2f855a; } 
