@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Achievements | Joab Lee</title>
-    <link rel="icon" type="image/png" href="photos/favicon.png">
+    <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,7 +12,7 @@
     <nav class="navbar">
         <div class="navbar-container">
             <a href="index.html" class="nav-brand">
-                <img src="photos/favicon.png" alt="Logo" class="nav-logo">
+                <img src="favicon.png" alt="Logo" class="nav-logo">
                 <span>Joab Lee</span>
             </a>
             <div class="nav-links">
@@ -29,82 +29,52 @@
         <div class="category-section">
             <h2 class="category-title">Leadership</h2>
             
-            <div class="achievement-card">
+            <div class="achievement-card" onclick="openModal('leadership-cert.jpg')">
                 <div class="event-meta">
                     <span class="event-date">2025 - 2026</span>
                     <span class="event-role">CCA Chairperson</span>
                 </div>
                 <h3 class="event-title">[CCA Name / Student Council Role]</h3>
-                <p class="event-details">Detail your responsibilities and achievements here. Mention how many members you managed, major school events you organized, or how you bridged communication between teachers and peers.</p>
-            </div>
-
-            <div class="achievement-card">
-                <div class="event-meta">
-                    <span class="event-date">2024</span>
-                    <span class="event-role">Class Chairman</span>
-                </div>
-                <h3 class="event-title">[Event or Class Leadership Position]</h3>
-                <p class="event-details">Describe what you did in this role, focusing on your problem-solving abilities and how you motivated your team to achieve a common goal.</p>
+                <p class="event-details">Detail your responsibilities. Click anywhere on this card to view evidence.</p>
+                <span class="view-evidence-tag">View Evidence &rarr;</span>
             </div>
         </div>
-
-
-        <div class="category-section">
-            <h2 class="category-title">Trips</h2>
-            
-            <div class="achievement-card">
-                <div class="event-meta">
-                    <span class="event-date">Nov 2025</span>
-                    <span class="event-role">Participant</span>
-                </div>
-                <h3 class="event-title">[Overseas Learning Journey to Country Name]</h3>
-                <p class="event-details">Write about your key takeaways from this trip. If it was an engineering or cultural exchange, mention how it broadened your global perspective or inspired your interest in technology.</p>
-            </div>
-        </div>
-
 
         <div class="category-section">
             <h2 class="category-title">Robotics</h2>
             
-            <div class="achievement-card">
+            <div class="achievement-card" onclick="openModal('robotics-competition.jpg')">
                 <div class="event-meta">
                     <span class="event-date">Mid 2025</span>
                     <span class="event-role">Lead Programmer</span>
                 </div>
-                <h3 class="event-title">[Competition Name, e.g., National Robotics Competition]</h3>
-                <p class="event-details">Detail your specific role in building or programming the robot. Highlight any awards won, or focus on how your team overcame a critical hardware/software bug under tight time pressure.</p>
-            </div>
-        </div>
-
-
-        <div class="category-section">
-            <h2 class="category-title">Academic</h2>
-            
-            <div class="achievement-card">
-                <div class="event-meta">
-                    <span class="event-date">2024 - 2025</span>
-                    <span class="event-role">Award Recipient</span>
-                </div>
-                <h3 class="event-title">[Award Name, e.g., Edusave Award for Achievement]</h3>
-                <p class="event-details">Briefly explain what this award acknowledges. This demonstrates your consistent work ethic and academic discipline to the selectors.</p>
-            </div>
-        </div>
-
-
-        <div class="category-section">
-            <h2 class="category-title">Community Service</h2>
-            
-            <div class="achievement-card">
-                <div class="event-meta">
-                    <span class="event-date">Early 2025</span>
-                    <span class="event-role">Volunteer</span>
-                </div>
-                <h3 class="event-title">[VIA Project Name or Community Service Event]</h3>
-                <p class="event-details">Describe the community impact of your work. Explain how you applied your personal strengths to help others, showing empathy and social responsibility.</p>
+                <h3 class="event-title">[Competition Name]</h3>
+                <p class="event-details">Detail your role. Click anywhere on this card to view evidence.</p>
+                <span class="view-evidence-tag">View Evidence &rarr;</span>
             </div>
         </div>
 
     </main>
+
+    <div id="evidenceModal" class="modal-overlay" onclick="closeModal()">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="modalTargetImage">
+    </div>
+
+    <script>
+        function openModal(imageSrc) {
+            const modal = document.getElementById('evidenceModal');
+            const modalImg = document.getElementById('modalTargetImage');
+            
+            modal.style.display = "flex";
+            modalImg.src = imageSrc;
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('evidenceModal');
+            modal.style.display = "none";
+        }
+    </script>
 
 </body>
 </html>
