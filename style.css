@@ -537,3 +537,70 @@ h2 {
     color: #5c7a65;
     line-height: 1.6;
 }
+
+/* Interactive Evidence Link indicator inside the card */
+.view-evidence-tag {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #3b8256;
+    transition: color 0.2s ease;
+}
+
+.achievement-card:hover .view-evidence-tag {
+    color: #1e3a27;
+}
+
+/* Lightbox Modal Backdrop Overlay */
+.modal-overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 2000; /* Stands well above the navbar */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(30, 58, 39, 0.85); /* Dark green tinted dark overlay */
+    justify-content: center;
+    align-items: center;
+    animation: fadeInModal 0.3s ease;
+}
+
+/* Fades the overlay cleanly */
+@keyframes fadeInModal {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* The actual image pop up scale window */
+.modal-content {
+    max-width: 85%;
+    max-height: 80vh;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 3px solid #ffffff;
+    object-fit: contain;
+    animation: zoomInImg 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes zoomInImg {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Close Button Positioned in top right Corner */
+.modal-close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.modal-close:hover {
+    transform: scale(1.1);
+}
