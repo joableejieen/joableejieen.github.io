@@ -463,36 +463,41 @@ h2 {
 .strength-card.strategic { border-top: 5px solid #2f855a; } 
 
 /* Achievements Page Specific Styling */
-.achievement-category {
-    background: #ffffff;
-    border-radius: 16px;
-    padding: 35px;
-    margin-bottom: 40px;
-    box-shadow: 0 4px 12px rgba(30, 58, 39, 0.03);
-    border: 1px solid #e1ebe4;
+.category-section {
+    margin-bottom: 50px;
 }
 
-/* Big Category Title Styling */
-.category-header {
+/* Category header outside of the card boxes */
+.category-title {
     color: #1e3a27;
     font-size: 1.6rem;
     font-weight: 700;
-    border-bottom: 2px dashed #c3d6c9; /* Clean dashed look for the section dividers */
-    padding-bottom: 12px;
     margin-top: 0;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #3b8256; /* Accent line strictly under the text header */
+    padding-bottom: 8px;
+    display: inline-block; /* Keeps the line wrapped tightly to the word width */
 }
 
-/* Individual Event Block Settings */
-.achievement-event {
-    position: relative;
-    padding-left: 20px;
-    margin-bottom: 30px;
-    border-left: 3px solid #3b8256; /* Vertical accent line on the left side of events */
+/* Each individual event gets its own dedicated modern box container */
+.achievement-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 12px rgba(30, 58, 39, 0.02);
+    border: 1px solid #e1ebe4;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.achievement-event:last-child {
-    margin-bottom: 0; /* Clears bottom margin on the final item of a category */
+.achievement-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(30, 58, 39, 0.05);
+    border-color: #c3d6c9;
+}
+
+.achievement-card:last-child {
+    margin-bottom: 0;
 }
 
 /* Event Metadata Layout Row */
@@ -500,7 +505,7 @@ h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
 }
 
 .event-date {
@@ -510,7 +515,7 @@ h2 {
 }
 
 .event-role {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     background-color: #f0f5f1;
     color: #2d5a3b;
     padding: 4px 12px;
