@@ -359,14 +359,6 @@ h2 {
     width: 100%; /* Ensures text centers relative to the photo width */
 }
 
-.tab-media {
-    flex: 0.9;
-    display: flex;
-    flex-direction: column; /* Forces the caption to sit directly underneath the image */
-    justify-content: flex-start;
-    align-items: center;
-}
-
 /* Ebook Link Button styling */
 .ebook-btn {
     display: inline-block;
