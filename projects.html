@@ -10,11 +10,11 @@
 <body>
 
     <nav class="navbar">
-        <div class="navbar-container"> <a href="index.html" class="nav-brand">
+        <div class="navbar-container">
+            <a href="index.html" class="nav-brand">
                 <img src="photos/favicon.png" alt="Logo" class="nav-logo">
                 <span>Joab Lee</span>
             </a>
-            
             <div class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="about.html">About Me</a>
@@ -24,20 +24,68 @@
         </div>
     </nav>
 
-    <header class="hero">
-        <h1>My Projects & Work</h1>
-        <p class="subtitle">Evidence of my skills and passion</p>
-    </header>
+    <main class="container" style="margin-top: 40px;">
 
-    <main class="container">
-        <section>
-            <h2>Featured Project 1</h2>
-            <p><strong>Role:</strong> Lead Developer / Designer / Team Member</p>
-            <p>
-                This is where you will write about your first major project. Describe what problem it solves, what tools or software you used to make it, and what the final result was.
-            </p>
-        </section>
+        <h1 class="page-main-title">My Projects</h1>
+
+        <div class="projects-grid">
+            
+            <div class="project-card" onclick="openProjectModal('photos/wro_2025_2nd.jpeg', 'WRO Future Engineering Robot', '2025', 'Built an autonomous robotic vehicle designed to navigate complex obstacle tracks using computer vision. Programmed using Python and OpenCV for precise line tracking and color detection. Implemented custom steering geometry to optimize cornering speeds.')">
+                <img src="photos/wro_2025_2nd.jpeg" alt="Project 1" class="project-card-img">
+                <div class="project-card-info">
+                    <span class="project-card-date">2025</span>
+                    <h3 class="project-card-title">WRO Future Engineering Robot</h3>
+                    <p class="project-card-snippet">An autonomous vehicle engineered for obstacle navigation and computer vision tasks...</p>
+                    <span class="read-more-tag">Read Details &rarr;</span>
+                </div>
+            </div>
+
+            <div class="project-card" onclick="openProjectModal('photos/hmgics.jpeg', 'HMGICS TechBot Challenge Entry', '2025', 'Designed a smart logistics sorting robot for the Hyundai TechBot challenge. Integrated precise sensor arrays to pick, map, and place payloads efficiently. Awarded 1st Runner-Up for execution speed and structural reliability.')">
+                <img src="photos/hmgics.jpeg" alt="Project 2" class="project-card-img">
+                <div class="project-card-info">
+                    <span class="project-card-date">2025</span>
+                    <h3 class="project-card-title">HMGICS TechBot</h3>
+                    <p class="project-card-snippet">A smart logistics and automated sorting system built for industrial simulation...</p>
+                    <span class="read-more-tag">Read Details &rarr;</span>
+                </div>
+            </div>
+
+            </div>
     </main>
+
+    <div id="projectModal" class="project-modal-overlay" onclick="closeProjectModal(event)">
+        <div class="project-modal-box">
+            <span class="project-modal-close" onclick="closeProjectModal(event)">&times;</span>
+            <div class="project-modal-split">
+                <div class="project-modal-media">
+                    <img id="projectModalImg" src="" alt="Project Image">
+                </div>
+                <div class="project-modal-text">
+                    <span id="projectModalDate" class="project-date-badge"></span>
+                    <h2 id="projectModalTitle"></h2>
+                    <p id="projectModalDesc"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openProjectModal(imgSrc, title, date, description) {
+            document.getElementById('projectModalImg').src = imgSrc;
+            document.getElementById('projectModalTitle').innerText = title;
+            document.getElementById('projectModalDate').innerText = date;
+            document.getElementById('projectModalDesc').innerText = description;
+            
+            document.getElementById('projectModal').style.display = "flex";
+        }
+
+        function closeProjectModal(event) {
+            // Closes modal safely if clicked cross button or directly onto dark background wrapper
+            if (event.target.id === "projectModal" || event.target.classList.contains("project-modal-close")) {
+                document.getElementById('projectModal').style.display = "none";
+            }
+        }
+    </script>
 
 </body>
 </html>
