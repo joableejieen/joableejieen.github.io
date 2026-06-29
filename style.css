@@ -462,11 +462,22 @@ h2 {
 .strength-card.execution { border-top: 5px solid #7b2481; }
 .strength-card.influencing { border-top: 5px solid #d4a017; } 
 .strength-card.relationship { border-top: 5px solid #2b6cb0; } 
-.strength-card.strategic { border-top: 5px solid #2f855a; } 
+.strength-card.strategic { border-top: 5px solid #2f855a; }
 
 /* Achievements Page Specific Styling */
 .category-section {
     margin-bottom: 50px;
+}
+
+/* Centralised Page Title Styling */
+.page-main-title {
+    text-align: center;
+    color: #1e3a27; /* Your signature dark forest green */
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 40px; /* Gives nice separation before the first category */
+    letter-spacing: -0.5px;
 }
 
 /* Category header outside of the card boxes */
@@ -554,7 +565,6 @@ h2 {
     color: #1e3a27;
 }
 
-/* Lightbox Modal Backdrop Overlay */
 .modal-overlay {
     display: none; /* Hidden by default */
     position: fixed;
@@ -569,13 +579,11 @@ h2 {
     animation: fadeInModal 0.3s ease;
 }
 
-/* Fades the overlay cleanly */
 @keyframes fadeInModal {
     from { opacity: 0; }
     to { opacity: 1; }
 }
 
-/* The actual image pop up scale window */
 .modal-content {
     max-width: 85%;
     max-height: 80vh;
@@ -591,7 +599,6 @@ h2 {
     to { transform: scale(1); opacity: 1; }
 }
 
-/* Close Button Positioned in top right Corner */
 .modal-close {
     position: absolute;
     top: 30px;
