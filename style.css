@@ -696,6 +696,7 @@ h2 {
 }
 
 /* Complex Project Description Pop-up Modal Box layout styling */
+/* --- Kept from your old setup --- */
 .project-modal-overlay {
     display: none;
     position: fixed;
@@ -711,17 +712,21 @@ h2 {
     box-sizing: border-box;
 }
 
+/* --- Updated: Increased width to 850px and added internal scrolling support --- */
 .project-modal-box {
     background: #ffffff;
     width: 100%;
-    max-width: 780px;
+    max-width: 850px; 
     border-radius: 16px;
     position: relative;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.25);
     animation: zoomInImg 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
     overflow: hidden;
+    max-height: 90vh; 
+    overflow-y: auto; 
 }
 
+/* --- Kept from your old setup --- */
 .project-modal-close {
     position: absolute;
     top: 15px;
@@ -738,38 +743,34 @@ h2 {
     color: #1e3a27;
 }
 
-.project-modal-split {
+/* --- New: Replaces .project-modal-split to force full-width vertical stacking --- */
+.project-modal-stack {
     display: flex;
-    align-items: stretch;
+    flex-direction: column;
+    width: 100%;
 }
 
-@media (max-width: 650px) {
-    .project-modal-split {
-        flex-direction: column;
-    }
-}
-
-.project-modal-media {
-    flex: 1;
+/* --- New: Replaces .project-modal-media to create the widescreen top banner --- */
+.project-modal-media-top {
+    width: 100%;
+    height: 380px; 
     background: #e1ebe4;
-    min-height: 300px;
 }
 
-.project-modal-media img {
+.project-modal-media-top img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; 
     display: block;
 }
 
-.project-modal-text {
-    flex: 1.2;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+/* --- New: Replaces .project-modal-text to give text the full 850px reading width --- */
+.project-modal-text-bottom {
+    padding: 40px; 
+    box-sizing: border-box;
 }
 
+/* --- Kept from your old setup --- */
 .project-date-badge {
     font-size: 0.8rem;
     color: #3b8256;
@@ -778,17 +779,20 @@ h2 {
     display: block;
 }
 
-.project-modal-text h2 {
+/* --- Updated: Bumped up text size slightly to match the wide layout scaling --- */
+.project-modal-text-bottom h2 {
     margin-top: 0;
     margin-bottom: 16px;
-    font-size: 1.6rem;
+    font-size: 1.8rem; 
     border-bottom: none !important;
     padding-bottom: 0 !important;
+    color: #1e3a27;
 }
 
-.project-modal-text p {
+/* --- Updated: Adjusted text sizing and spacing for comfortable reading --- */
+.project-modal-text-bottom p {
     margin: 0;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     color: #5c7a65;
     line-height: 1.6;
 }
