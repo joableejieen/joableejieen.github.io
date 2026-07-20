@@ -789,3 +789,87 @@ h2 {
     line-height: 1.6;
 }
 
+/* Homepage Scrolling Summary Section Layout */
+.home-scrolled-content {
+    margin-top: 60px !important; /* Separation space directly under the front cover view */
+}
+
+.home-summary-box {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 35px 40px;
+    margin-bottom: 30px;
+    border: 1px solid #e1ebe4;
+    box-shadow: 0 4px 12px rgba(30, 58, 39, 0.02);
+}
+
+.home-summary-box h2 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 1.5rem;
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+    color: #1e3a27;
+}
+
+.home-summary-box p {
+    font-size: 0.95rem;
+    color: #5c7a65;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Teaser block configurations */
+.home-project-teaser {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.teaser-item {
+    background-color: #f8faf9;
+    padding: 18px;
+    border-radius: 8px;
+    border-left: 4px solid #3b8256;
+}
+
+.teaser-item strong {
+    color: #1e3a27;
+    font-size: 0.95rem;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.teaser-item p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #5c7a65;
+}
+
+.home-bullet-list {
+    margin: 0 0 20px 0;
+    padding-left: 20px;
+}
+
+.home-bullet-list li {
+    font-size: 0.95rem;
+    color: #5c7a65;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+/* Action button shortcuts linking to the deep subpages */
+.home-link-btn {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #3b8256;
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.home-link-btn:hover {
+    color: #1e3a27;
+    transform: translateX(3px); /* Interactive nudging movement indicator */
+}
