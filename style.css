@@ -798,6 +798,30 @@ h2 {
     line-height: 1.6;
 }
 
+.project-modal-text-bottom p {
+    margin-top: 0;
+    margin-bottom: 14px;
+    font-size: 0.95rem;
+    color: #5c7a65;
+    line-height: 1.6;
+}
+
+.project-modal-text-bottom strong {
+    color: #1e3a27;
+}
+
+.project-modal-text-bottom ul {
+    margin: 10px 0 20px 20px;
+    padding: 0;
+}
+
+.project-modal-text-bottom li {
+    font-size: 0.9rem;
+    color: #5c7a65;
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
 /* Homepage Scrolling Summary Section Layout */
 .home-scrolled-content {
     margin-top: 60px !important; /* Separation space directly under the front cover view */
