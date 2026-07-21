@@ -752,7 +752,7 @@ h2 {
 
 .project-modal-media-top {
     width: 100%;
-    background: #102216; /* Dark forest green backdrop to mask any empty side margins cleanly */
+    background: #FFFFFF; /* Dark forest green backdrop to mask any empty side margins cleanly */
     display: flex;
     justify-content: center;
     align-items: center;
